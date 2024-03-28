@@ -13,7 +13,7 @@ RockContent Blog is public site With Preset of Roles, Permissions, ACL, User Man
 - Role Management
 - Permissions Management
 - Access Control List (ACL)
-- Laravel 8 + Bootstrap 4
+- Laravel 8 + Jetstream 
 - Filament 3
 
 
