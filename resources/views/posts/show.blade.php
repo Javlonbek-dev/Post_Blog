@@ -1,8 +1,8 @@
-<x-app-layout >
+<x-app-layout xmlns:livewire="http://www.w3.org/1999/html">
 
         <article class="col-span-4 md:col-span-3 mt-10 mx-auto py-5 w-full" style="max-width:700px">
-            <img class="w-full my-2 rounded-lg" src="{{$post->image}}" alt="">
-            <h1 class="text-4xl font-bold text-left text-gray-800">
+            <img class="w-full my-2 rounded-lg mb-2" src="{{$post->image}}" alt="">
+            <h1 class="text-lg font-bold text-left text-gray-800">
                 {{$post->title}}
             </h1>
             <div class="mt-2 flex justify-between items-center">
@@ -36,7 +36,7 @@
                 {{$post->contents}}
             </div>
 
-            <livewire:post-comments/>
+            <livewire:post-comments :key="'comments' . $post->id" :$post/>
 
         </article>
 
