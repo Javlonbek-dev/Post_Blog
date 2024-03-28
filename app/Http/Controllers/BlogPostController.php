@@ -12,4 +12,14 @@ class BlogPostController extends Controller
             'posts' => BlogPost::take(5)->get()
         ]);
     }
+
+    public function show(BlogPost $post)
+    {
+        return view(
+            'posts.show',
+            [
+                'post' => $post
+            ]
+        );
+    }
 }
