@@ -13,19 +13,20 @@ class PostComments extends Component
     public BlogPost $post;
 
     #[Rule('required|min:3|max:200')]
-    public  string $comment;
+    public string $comment;
 
     public function postComment()
     {
         $this->validateOnly('comment');
 
         $this->post->comments()->create([
-            'comment'=>$this->comment,
-            'user_id'=>auth()->id()
+            'comment' => $this->comment,
+            'user_id' => auth()->id()
         ]);
 
         $this->reset('comment');
     }
+
     #[Computed()]
     public function comments()
     {

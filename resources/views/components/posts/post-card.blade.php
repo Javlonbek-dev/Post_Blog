@@ -12,7 +12,7 @@
         </div>
         <a style="display: block;margin-bottom: 5px" href="{{route('blogPost.show', $post->slug)}}" class="text-xl font-bold text-gray-900 ">{{$post->title}}</a>
        &nbsp;
-        <div style="display: flex">
+        <div style="display: flex; align-items: center">
             <img class="w-8 h-8 rounded-full" style="margin-right: 10px; border-radius: 50%;"
                  src="{{$post->user->profile_photo_path}}">
             <a href="" class="text-ms font-bold text-red-600">{{$post->user->name}}</a>
